@@ -4,7 +4,7 @@
 - [Vite](#Vite)
 - [Bundler](#Bundler)
 - [Call Stack နှင့် Memory Heap အလုပ်လုပ်ပုံ](#Call-Stack-နှင့်-Memory-Heap-အလုပ်လုပ်ပုံ)
-
+- [Abstract Syntax Tree (AST)](#Abstract-Syntax-Tree-(AST))
 
 
 ## Vite
@@ -163,4 +163,55 @@ Memory (Stack) ထဲမှာ "Kyaw" ဆိုတဲ့ တန်ဖိုး�
 
 အဟောင်း "Aung" ကတော့ ဘယ်သူမှ မသုံးတော့ရင် memory ထဲက ဖျက်ထုတ်ခြင်း ခံရမှာပါ။
 
+```
+
+
+
+
+## Abstract Syntax Tree (AST)
+```
+Abstract Syntax Tree (AST) ဆိုတာ ရိုးရိုးရှင်းရှင်း ပြောရရင် ကျနော်တို့ ရေးလိုက်တဲ့ 
+Programming Code တွေကို Computer Engine (ဥပမာ- JS Engine) က နားလည်အောင်
+အဆင့်ဆင့် ခွဲခြမ်းစိတ်ဖြာပြီး တည်ဆောက်လိုက်တဲ့ "သစ်ပင်ပုံစံ Structure" တစ်ခုဖြစ်ပါတယ်။
+
+Code တွေကို စာသား (Text) အနေနဲ့ မဟုတ်ဘဲ Logical ဖြစ်တဲ့ အစိတ်အပိုင်းတွေအဖြစ် ခွဲထုတ်လိုက်တာပါ။
+
+AST အလုပ်လုပ်ပုံ အဆင့်ဆင့်
+JS Engine က Code တွေကို တိုက်ရိုက်မပတ်ဘဲ အောက်ပါအတိုင်း အဆင့်ဆင့် ပြောင်းလဲပါတယ်-
+
+Lexical Analysis (Tokenization): ပထမဆုံး Code တွေကို const, x, =, 10 ဆိုပြီး 
+အစိတ်အပိုင်း (Tokens) လေးတွေအဖြစ် အရင်ခွဲပါတယ်။
+
+Syntax Analysis (Parsing): အဲဒီ Tokens လေးတွေကို စုစည်းပြီး တစ်ခုနဲ့တစ်ခု 
+ဘယ်လိုဆက်စပ်လဲဆိုတာကို Tree ပုံစံ (AST) တည်ဆောက်ပါတယ်။
+
+ဥပမာပြရရင်:
+ကျနော်တို့က $const x = 5 + 3;$ လို့ ရေးလိုက်ရင် AST က ဒီလိုပုံစံမျိုး ဖြစ်သွားပါမယ်-
+
+VariableDeclaration: const
+
+Identifier: x
+
+Expression: (Binary Expression)
+
+Left: 5
+
+Operator: +
+
+Right: 3
+
+AST ကို ဘာကြောင့် သုံးတာလဲ?
+Engine တွေအတွက်တင်မကဘဲ ကျနော်တို့ နေ့စဉ်သုံးနေတဲ့ Tool တွေမှာလည်း AST က အရေးကြီးပါတယ်-
+
+Minification: Code တွေထဲက မလိုအပ်တဲ့ space တွေ ဖယ်ထုတ်တာနဲ့ variable 
+နာမည်တွေကို အတိုချုံ့တာ (ဥပမာ- longVariableName ကို a လို့ပြောင်းတာ) တွေမှာ သုံးပါတယ်။
+
+Transpilation (Babel): Modern JS (ES6+) code တွေကို Browser အဟောင်းတွေမှာ
+ အလုပ်လုပ်အောင် code ပြန်ပြောင်းတဲ့နေရာမှာ သုံးပါတယ်။
+
+Linting (ESLint): ကျနော်တို့ code ရေးတာ မှားနေသလား၊ format မကျဘူးလားဆိုတာကို 
+AST ကို ကြည့်ပြီး စစ်ဆေးပေးတာပါ။
+
+အကျဉ်းချုပ်: AST ဆိုတာ Code ရဲ့ "Structure" ကို ဖော်ပြတဲ့ မြေပုံတစ်ခုဖြစ်ပြီး Engine က
+ Code ကို မြန်မြန်ဆန်ဆန်နဲ့ တိတိကျကျ အကောင်အထည်ဖော်နိုင်အောင် ကူညီပေးပါတယ်။
 ```
