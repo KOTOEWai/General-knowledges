@@ -9,6 +9,11 @@
 - [UML](#UML)
 - [Use Case Diagram](#use-case-diagram)
 
+
+## Books
+- [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript?tab=readme-ov-file#objects-and-data-structures)
+
+
 ## Vite
 
 ```
