@@ -259,7 +259,7 @@ Compiler ကတော့ ကုဒ်တစ်ခုလုံး (Project တစ
 ```
 ---
 # UML
-![UML](<img width="785" height="402" alt="image" src="https://github.com/user-attachments/assets/b9c3552a-0d85-428f-bd50-69ff5e821957" />)
+![UML](https://media.geeksforgeeks.org/wp-content/uploads/20240129102203/Use-Case-Diagram-Notations.webp)
 
 ```
 Unified Modeling Language (UML) ဆိုတာ ဆော့ဖ်ဝဲလ်စနစ်တစ်ခုရဲ့ တည်ဆောက်ပုံ၊ အလုပ်လုပ်ပုံနဲ့ အစိတ်အပိုင်းတွေကြား
