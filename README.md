@@ -12,7 +12,7 @@
 
 ## Books
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript?tab=readme-ov-file#objects-and-data-structures)
-
+- [functional-programming-EiMaung](https://gist.github.com/eimg/161285a546dab0ae12b3155c2f86bb91)
 
 ## Vite
 
